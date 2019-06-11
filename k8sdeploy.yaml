@@ -1,41 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: atb-heroes-dev-app-dep
-  namespace: avanade-tech-and-beer
-  labels:
-    app: atb-heroes-dev
-    tier: app
-    version: v1
+  name: avaheroes
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: atb-heroes-dev
-      tier: app
-      version: v1
-  replicas: 2
+      app: techheroes
   template:
     metadata:
       labels:
-        app: atb-heroes-dev
-        tier: app
-        version: v1
+        app: techheroes
     spec:
       containers:
-        - name: atbheroes
-          image: 'technbeeracr1.azurecr.io/avengersheroes:latest'
-          ports:
-            - name: http 
-              containerPort: 80
-              protocol: TCP
-          livenessProbe:
-            initialDelaySeconds: 2
-            periodSeconds: 3600
-            httpGet:
-              path: /swagger/index.html
-              port: 80
-          resources:
-            requests:
-              cpu: 25m
-              memory: 150Mi                
- 
+      - name: techheroes
+        image: technbeeracr1.azurecr.io/avengersheroes
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 256Mi

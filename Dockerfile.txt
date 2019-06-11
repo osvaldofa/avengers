@@ -13,7 +13,7 @@ COPY . ./
 WORKDIR /Avengers.Hero.Api
 RUN dotnet publish -c Release -o /app
 
-# Define o runtime
+# Define o runtime da aplicação
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
 
 WORKDIR /app

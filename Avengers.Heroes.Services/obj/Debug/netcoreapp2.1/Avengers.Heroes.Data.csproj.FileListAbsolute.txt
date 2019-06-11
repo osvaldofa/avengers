@@ -1,0 +1,8 @@
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Services\bin\Debug\netcoreapp2.1\Avengers.Heroes.Data.deps.json
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Services\bin\Debug\netcoreapp2.1\Avengers.Heroes.Data.dll
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Services\obj\Debug\netcoreapp2.1\Avengers.Heroes.Data.csproj.CoreCompileInputs.cache
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Services\obj\Debug\netcoreapp2.1\Avengers.Heroes.Data.AssemblyInfoInputs.cache
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Services\obj\Debug\netcoreapp2.1\Avengers.Heroes.Data.AssemblyInfo.cs
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Services\bin\Debug\netcoreapp2.1\Avengers.Heroes.Data.pdb
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Services\obj\Debug\netcoreapp2.1\Avengers.Heroes.Data.dll
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Services\obj\Debug\netcoreapp2.1\Avengers.Heroes.Data.pdb

@@ -1,0 +1,25 @@
+FROM microsoft/dotnet:2.1-sdk AS build-env
+
+# Copia os arquivos de todas as camadas
+COPY *.sln ./
+COPY nuget.config ./
+
+COPY Avengers.Hero.Api/Avengers.Hero.Api.csproj Avengers.Hero.Api/
+COPY Avengers.Heroes.Domain/Avengers.Heroes.Domain.csproj Avengers.Heroes.Domain/
+COPY Avengers.Heroes.Services/Avengers.Heroes.Data.csproj Avengers.Heroes.Services/
+RUN dotnet restore
+
+# Copia os demais arquivos e faz o Build
+COPY . ./
+WORKDIR /Avengers.Hero.Api
+RUN mv appsettings.Docker.json appsettings.json
+RUN dotnet publish -c Release -o /app
+
+# Define o 
+FROM commonsacrprd.azurecr.io/dotnet:2.1-aspnetcore-runtime
+
+WORKDIR /app
+COPY --from=build-env /app .
+ENTRYPOINT ["dotnet", "Avengers.Hero.Api.dll"]
+
+EXPOSE 80

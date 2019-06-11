@@ -1,0 +1,12 @@
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\bin\Debug\netcoreapp2.1\Avengers.Heroes.Domain.deps.json
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\bin\Debug\netcoreapp2.1\Avengers.Heroes.Domain.dll
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\obj\Debug\netcoreapp2.1\Avengers.Heroes.Domain.csprojAssemblyReference.cache
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\obj\Debug\netcoreapp2.1\Avengers.Heroes.Domain.csproj.CoreCompileInputs.cache
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\obj\Debug\netcoreapp2.1\Avengers.Heroes.Domain.AssemblyInfoInputs.cache
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\obj\Debug\netcoreapp2.1\Avengers.Heroes.Domain.AssemblyInfo.cs
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\bin\Debug\netcoreapp2.1\Avengers.Heroes.Domain.pdb
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\obj\Debug\netcoreapp2.1\Avengers.Heroes.Domain.dll
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\obj\Debug\netcoreapp2.1\Avengers.Heroes.Domain.pdb
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\bin\Debug\netcoreapp2.1\Avengers.Heroes.Data.dll
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\bin\Debug\netcoreapp2.1\Avengers.Heroes.Data.pdb
+C:\Users\o.ferreira.alves\source\repos\TB201906\Avengers.Heroes.Domain\obj\Debug\netcoreapp2.1\Avengers.Heroes.Domain.csproj.CopyComplete

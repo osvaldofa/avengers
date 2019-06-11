@@ -1,0 +1,91 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+  name: atb-heroes-dev-app-svc
+  namespace: avanade-tech-and-beer
+  labels:
+    app: atb-heroes-dev
+    tier: app
+    version: v1
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+  selector:
+    app: atb-heroes-dev
+    tier: app
+    version: v1
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atb-heroes-dev-app-dep
+  namespace: avanade-tech-and-beer
+  labels:
+    app: atb-heroes-dev
+    tier: app
+    version: v1
+spec:
+  selector:
+    matchLabels:
+      app: atb-heroes-dev
+      tier: app
+      version: v1
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: atb-heroes-dev
+        tier: app
+        version: v1
+    spec:
+      containers:
+        - name: atbheroes
+          image: 'technbeeracra.azurecr.io/atbheroes:latest'
+          ports:
+            - name: http 
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            initialDelaySeconds: 2
+            periodSeconds: 3600
+            httpGet:
+              path: /swagger/index.html
+              port: 80
+          resources:
+            requests:
+              cpu: 25m
+              memory: 150Mi
+          terminationMessagePath: /DEV/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+---
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: atb-heroes-dev-app-hpa
+  namespace: avanade-tech-and-beer
+spec:
+  maxReplicas: 2
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: atb-heroes-dev-app-dep
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        targetAverageUtilization: 70
+    - type: Resource
+      resource:
+        name: memory
+        targetAverageUtilization: 80

@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: atbheroes
-          image: 'technbeeracra.azurecr.io/atbheroes:latest'
+          image: 'technbeeracr1.azurecr.io/avengersheroes:latest'
           ports:
             - name: http 
               containerPort: 80
@@ -37,13 +37,5 @@ spec:
           resources:
             requests:
               cpu: 25m
-              memory: 150Mi
-          terminationMessagePath: /DEV/termination-log
-          terminationMessagePolicy: File
-          imagePullPolicy: IfNotPresent
-      restartPolicy: Always
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 25%
-      maxSurge: 25%
+              memory: 150Mi                
+ 

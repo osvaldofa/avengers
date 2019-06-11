@@ -2,7 +2,6 @@ FROM microsoft/dotnet:2.1-sdk AS build-env
 
 # Copia os arquivos de todas as camadas
 COPY *.sln ./
-COPY nuget.config ./
 
 COPY Avengers.Hero.Api/Avengers.Hero.Api.csproj Avengers.Hero.Api/
 COPY Avengers.Heroes.Domain/Avengers.Heroes.Domain.csproj Avengers.Heroes.Domain/

@@ -13,8 +13,8 @@ COPY . ./
 WORKDIR /Avengers.Hero.Api
 RUN dotnet publish -c Release -o /app
 
-# Define o 
-FROM commonsacrprd.azurecr.io/dotnet:2.1-aspnetcore-runtime
+# Define o runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
 
 WORKDIR /app
 COPY --from=build-env /app .

@@ -11,7 +11,6 @@ RUN dotnet restore
 # Copia os demais arquivos e faz o Build
 COPY . ./
 WORKDIR /Avengers.Hero.Api
-RUN mv appsettings.Docker.json appsettings.json
 RUN dotnet publish -c Release -o /app
 
 # Define o 
